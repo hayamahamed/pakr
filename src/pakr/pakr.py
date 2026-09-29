@@ -39,5 +39,11 @@ def pack(src, pak):
     open(pak, "wb").write(hdr + idx + ali + b"".join(blobs))
     print("wrote", pak)
 
+def main():
+    {"unpack": unpack, "pack": pack}[sys.argv[1]](
+        sys.argv[2],
+        sys.argv[3],
+    )
+
 if __name__ == "__main__":
-    {"unpack": unpack, "pack": pack}[sys.argv[1]](sys.argv[2], sys.argv[3])
+    main()
