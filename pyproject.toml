@@ -1,0 +1,25 @@
+[project]
+name = "pakr"
+version = "0.1.1"
+authors = [
+  { name="Hayam Ahamed", email="hayam@duck.com" },
+]
+description = "Unpack and repack .pak files without mutating header data"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/hayamahamed/pakr"
+Issues = "https://github.com/hayamahamed/pakr/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+pakr = "pakr.pakr:main"
